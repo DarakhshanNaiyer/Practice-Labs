@@ -1,0 +1,3 @@
+sitename:insta
+username:akn
+password:akn1234

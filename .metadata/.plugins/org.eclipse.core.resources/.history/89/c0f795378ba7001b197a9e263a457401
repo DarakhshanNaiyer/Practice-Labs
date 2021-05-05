@@ -1,0 +1,96 @@
+package Lesson4;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+class HuffmanNode {
+	
+	int data;
+	char c;
+	
+	HuffmanNode left;
+	HuffmanNode right;
+
+}
+
+class MyComparator implements Comparator<HuffmanNode>{
+	
+	public int compare (HuffmanNode x,HuffmanNode y)
+	{
+		return x.data-y.data;
+		
+	}
+			}
+
+public class HuffmanCode {
+	
+	public static void printCode(HuffmanNode root, String s) {
+		
+		if (root.left==null 
+			&& root.right==null
+			&& Character.isLetter(root.c)){
+				
+				System.out.println(root.c+":"+s);
+				
+				return;
+			}
+		
+	   printCode(root.left, s+"0");
+	   printCode(root.right, s+"0");
+
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int n=6;
+		char[] charArray= {'a','b','c','d','e','f'};
+		int[] charfreq= {5,9,12,13,16,45};
+		
+		PriorityQueue<HuffmanNode> queue = new PriorityQueue<HuffmanNode> (n,new MyComparator());
+		
+		for(int i=0; i<n; i++) {
+			
+			HuffmanNode HN= new HuffmanNode();
+			
+			HN.c=charArray[i];
+			HN.data=charfreq[i];
+			
+			HN.left=null;
+			HN.right=null;
+			
+			queue.add(HN);
+		}
+		
+		HuffmanNode root=null;
+		
+		while (queue.size()>1) {
+			
+			HuffmanNode x=queue.peek();
+			queue.poll();
+			
+			HuffmanNode y=queue.peek();
+			queue.poll();
+			
+			HuffmanNode HN2= new HuffmanNode();
+
+			HN2.data=x.data+y.data;
+			HN2.c='-';
+			
+			HN2.left=x;
+			HN2.right=y;
+			
+			root=HN2;
+			
+			queue.add(HN2);
+
+		}
+		
+		printCode(root,"");
+	}
+	
+}
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;BigONotations.LogrithmicNotation&apos; to &apos;LinearNotation&apos;&#x0D;&#x0A;- Original project: &apos;DataStructureLiveClass&apos;&#x0D;&#x0A;- Original element: &apos;BigONotations.LogrithmicNotation&apos;&#x0D;&#x0A;- Renamed element: &apos;BigONotations.LinearNotation&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LogrithmicNotation&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;BigONotations{LogrithmicNotation.java[LogrithmicNotation" matchStrategy="1" name="LinearNotation" qualified="false" references="true" similarDeclarations="false" stamp="1618671581190" textual="false" version="1.0"/>
+</session>

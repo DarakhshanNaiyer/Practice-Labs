@@ -1,0 +1,26 @@
+package JavaStreamAPI;
+
+import java.util.stream.Stream;
+
+public class StreamAPIEX1 {
+
+	public static void main(String[] args) {
+//
+//		int [] arr = new int [] {1, 2,3,4,5};
+//		
+//		for (int i :arr )
+//			System.out.println(i);
+
+		Stream<Integer> stream1 = Stream.of(1,2,3,4,5);
+		stream1.forEach(a -> System.out.println(a));
+		
+		System.out.println("------------------");
+		
+		//Another Way of doing the same
+		
+		Stream<Integer> stream2 = Stream.of(new Integer[] {1,2,3,4,5});
+		stream2.forEach(a -> System.out.println(a));
+		
+	}
+
+}

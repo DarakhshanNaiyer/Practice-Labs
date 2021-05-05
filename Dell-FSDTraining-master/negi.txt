@@ -1,0 +1,3 @@
+sitename:insta
+username:negi
+password:negi@123

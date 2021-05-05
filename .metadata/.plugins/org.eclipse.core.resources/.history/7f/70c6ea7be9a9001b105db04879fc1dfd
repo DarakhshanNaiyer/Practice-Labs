@@ -1,0 +1,24 @@
+package Lesson6;
+
+import java.util.LinkedList;
+
+//GraphTraverse using BFS
+
+public class GraphTraverseBFS {
+	
+	{
+		public int V; //No. of vertices
+		private LinkedList<Integer> adj[];
+		
+		//Constructor 
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
